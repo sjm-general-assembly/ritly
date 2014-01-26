@@ -1,5 +1,13 @@
 Ritly::Application.routes.draw do
+
+	# create a route for root link, sending to main/home page (index)
 	root to: 'rlinks#index'
+
+	# all standard Restful CRUD routes
+	resources	:rlinks
+
+	# custom application routes
+
 end
 
 # just wanted to share this code in case anyone wants to use it. 
