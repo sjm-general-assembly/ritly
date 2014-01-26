@@ -45,10 +45,8 @@ class RlinksController < ApplicationController
 
 		# GET - user entered URL with go/token
 		def route_link
-
 			new_url = Rlink.url_lookup_by_token(params[:link_token])
-
-			redirect_to new_url
+			new_url == nil ? (render :token_not_found) : (redirect_to new_url)
 		end
 
 end
