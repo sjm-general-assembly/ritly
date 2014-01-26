@@ -16,4 +16,11 @@ class RlinksController < ApplicationController
 	    redirect_to action: :index
 		end
 
+		# GETSs a form (disabled) to display a given link
+		def show
+			id = params[:id]
+			@current_link = Rlink.find(id)
+
+		end
+
 end

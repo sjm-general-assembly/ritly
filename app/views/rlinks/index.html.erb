@@ -10,7 +10,7 @@
 		</tr>
 		<% @rlinks.each do |rlink| %>
 			<tr>
-				<td><%= rlink.id %></td>
+				<td><a href="/rlinks/<%= rlink.id %>"><%= rlink.id %></a></td>
 				<td><%= rlink.link %></td>
 				<td><%= rlink.random_string %></td>
 				<td><%= rlink.created_at %></td>

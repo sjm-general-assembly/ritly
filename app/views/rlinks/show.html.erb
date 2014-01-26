@@ -1,0 +1,27 @@
+<h2>Selected Link</h2>
+<div class='col-md-6'>
+<form role="form">
+	<fieldset disabled>
+		<div class="form-group">
+    		<label for="inputDisplayID">ID</label>
+    		<input type="text" class="form-control" id="inputDisplayID" placeholder="<%= @current_link.id %>">
+  		</div>
+  		<div class="form-group">
+    		<label for="inputDisplayTargetURL">Target URL</label>
+    		<input type="text" class="form-control" id="inputDisplayTargetURL" placeholder="<%= @current_link.link %>">
+  		</div>
+  		<div class="form-group">
+    		<label for="inputDisplayLinkToken">Link Token</label>
+    		<input type="text" class="form-control" id="inputDisplayLinkToken" placeholder="<%= @current_link.random_string %>">
+  		</div>
+  		<div class="form-group">
+    		<label for="inputDisplayCreatedTimestamp">Created</label>
+    		<input type="text" class="form-control" id="inputDisplayCreatedTimestamp" placeholder="<%= @current_link.created_at %>">
+  		</div>
+  		<div class="form-group">
+    		<label for="inputDisplayUpatedTimestamp">Last Updated</label>
+    		<input type="text" class="form-control" id="inputDisplayUpdatedTimestamp" placeholder="<%= @current_link.updated_at %>">
+  		</div>
+	</fieldset>
+</form>
+</div>
