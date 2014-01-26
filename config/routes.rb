@@ -16,6 +16,7 @@ Ritly::Application.routes.draw do
 	resources	:rlinks
 
 	# custom application routes
+	get '/rlinks/go/:link_token', to: "rlinks#route_link"
 
 end
 
