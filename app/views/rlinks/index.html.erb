@@ -1,19 +1,21 @@
 <h2>Active Links</h2>
-<table class="table table-bordered">
-	<tr>
-		<th>ID</th>
-		<th>URL</th>
-		<th>Link String</th>
-		<th>Created</th>
-		<th>Updated</th>
-	</tr>
-	<% @rlinks.each do |rlink| %>
+  <div class='col-md-9'>
+	<table class="table table-bordered">
 		<tr>
-			<td><%= rlink[:id]%></td>
-			<td><%= rlink[:link]%></td>
-			<td><%= rlink[:random_string]%></td>
-			<td><%= rlink[:created_at]%></td>
-			<td><%= rlink[:updated_at]%></td>
+			<th>ID</th>
+			<th>Target URL</th>
+			<th>Link Token</th>
+			<th>Created</th>
+			<th>Updated</th>
 		</tr>
-	<% end %>
-</table>
+		<% @rlinks.each do |rlink| %>
+			<tr>
+				<td><%= rlink.id %></td>
+				<td><%= rlink.link %></td>
+				<td><%= rlink.random_string %></td>
+				<td><%= rlink.created_at %></td>
+				<td><%= rlink.updated_at %></td>
+			</tr>
+		<% end %>
+	</table>
+</div>

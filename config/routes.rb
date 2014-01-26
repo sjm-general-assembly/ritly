@@ -4,6 +4,15 @@ Ritly::Application.routes.draw do
 	root to: 'rlinks#index'
 
 	# all standard Restful CRUD routes
+	#      root GET     /                          rlinks#index
+	#     rlinks GET    /rlinks(.:format)          rlinks#index
+	#            POST   /rlinks(.:format)          rlinks#create
+	#  new_movie GET    /rlinks/new(.:format)      rlinks#new
+	# edit_movie GET    /rlinks/:id/edit(.:format) rlinks#edit
+	#      movie GET    /rlinks/:id(.:format)      rlinks#show
+	#            PATCH  /rlinks/:id(.:format)      rlinks#update
+	#            PUT    /rlinks/:id(.:format)      rlinks#update
+	#            DELETE /rlinks/:id(.:format)      rlinks#destroy
 	resources	:rlinks
 
 	# custom application routes
