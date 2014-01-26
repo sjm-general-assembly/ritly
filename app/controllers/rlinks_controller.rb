@@ -12,15 +12,14 @@ class RlinksController < ApplicationController
 		# POSTs the results from new, creating a new link
 		def create
 			new_rlink = params.require(:rlink).permit(:link, :random_string)
-			Rlink.create(new_rlink)
-	    redirect_to action: :index
+			rlink = Rlink.create(new_rlink)
+    	redirect_to rlink
 		end
 
 		# GETSs a form (disabled) to display a given link
 		def show
 			id = params[:id]
 			@current_link = Rlink.find(id)
-
 		end
 
 end
