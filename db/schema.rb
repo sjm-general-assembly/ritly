@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140126011055) do
+ActiveRecord::Schema.define(version: 20140126050007) do
 
   create_table "rlinks", force: true do |t|
     t.string   "link"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20140126011055) do
     t.datetime "updated_at"
   end
 
-  add_index "rlinks", ["link"], name: "index_rlinks_on_link", unique: true
   add_index "rlinks", ["random_string"], name: "index_rlinks_on_random_string", unique: true
 
 end
