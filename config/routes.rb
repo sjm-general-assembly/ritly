@@ -1,4 +1,5 @@
 Ritly::Application.routes.draw do
+	root to: 'rlinks#index'
 end
 
 # just wanted to share this code in case anyone wants to use it. 
