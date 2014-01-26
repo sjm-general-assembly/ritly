@@ -24,4 +24,6 @@
   		</div>
 	</fieldset>
 </form>
+<%= link_to "Edit", edit_rlink_path(@current_link), class: "btn btn-warning" %>
+<%= link_to "Delete", @current_link, method: :delete, class: "btn btn-danger", data: { confirm: "Delete this link: Are you sure?" } %>
 </div>
