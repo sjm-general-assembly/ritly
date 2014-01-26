@@ -1,4 +1,4 @@
-<%= form_for :rlink, url: rlinks_path do |rl| %>
+<%= form_for @rlink do |rl| %>
   <%= label_tag(:link, "Target URL:") %> <%= rl.text_field :link %></br>
   <%= label_tag(:random_string, "Link Token:") %> <%= rl.text_field :random_string %></br>
   <%= rl.submit "Create" %>

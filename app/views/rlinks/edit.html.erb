@@ -1,0 +1,5 @@
+<%= form_for @rlink do |rl| %>
+  <%= label_tag(:link, "Target URL:") %> <%= rl.text_field :link, value: @rlink.link %></br>
+  <%= label_tag(:random_string, "Link Token:") %> <%= rl.text_field :random_string, value: @rlink.random_string %></br>
+  <%= rl.submit "Update" %>
+<% end %>
