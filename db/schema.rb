@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140126050007) do
+ActiveRecord::Schema.define(version: 20140128055203) do
 
   create_table "rlinks", force: true do |t|
     t.string   "link"
@@ -21,5 +21,13 @@ ActiveRecord::Schema.define(version: 20140126050007) do
   end
 
   add_index "rlinks", ["random_string"], name: "index_rlinks_on_random_string", unique: true
+
+  create_table "users", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+  end
 
 end

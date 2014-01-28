@@ -1,3 +1,14 @@
+# == Schema Information
+#
+# Table name: rlinks
+#
+#  id            :integer          not null, primary key
+#  link          :string(255)
+#  random_string :string(255)
+#  created_at    :datetime
+#  updated_at    :datetime
+#
+
 class Rlink < ActiveRecord::Base
 	validates :random_string, uniqueness: true
 

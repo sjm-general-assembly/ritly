@@ -1,13 +1,6 @@
 Ritly::Application.routes.draw do
 
-  get "users/new"
-  get "users/show"
-  get "users/create"
-  get "sessions/new"
-  get "sessions/destroy"
-  get "new/show"
-  get "new/create"
-	# all standard Restful CRUD routes
+	# all standard Restful CRUD routes (listed example for rlinks, also includes users, sessions)
 	#      root GET     /                          rlinks#index
 	#     rlinks GET    /rlinks(.:format)          rlinks#index
 	#            POST   /rlinks(.:format)          rlinks#create
@@ -17,7 +10,7 @@ Ritly::Application.routes.draw do
 	#            PATCH  /rlinks/:id(.:format)      rlinks#update
 	#            PUT    /rlinks/:id(.:format)      rlinks#update
 	#            DELETE /rlinks/:id(.:format)      rlinks#destroy
-	resources	:rlinks
+	resources	:rlinks, :users, :sessions
 
 	# create a route for root link, sending to main/home page (index)
 	root to: 'rlinks#index'
