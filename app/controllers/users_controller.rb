@@ -9,7 +9,8 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user=User.new(params[:user])
+    new_user = params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    @user=User.new(new_user)
     if @user.save
       flash[:success] = "Welcome to Ritly!"
       sign_in @user
@@ -19,10 +20,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def update
-    @user = User.find(params[:id])
-    @user.update_attributes(params[:user])
-    render :show
-  end
+  # Not used (but could provide update functionality)
+  # def update
+  #   @user = User.find(params[:id])
+  #   @user.update_attributes(params[:user])
+  #   render :show
+  # end
 
 end

@@ -10,7 +10,9 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :name, :email, :password, :password_confirmation
+  # this line not needed when using Rails 4, and  (require & permit with params)
+  # attr_accessible :name, :email, :password, :password_confirmation
+  
   has_secure_password
 
   before_save { |user| user.email = email.downcase }

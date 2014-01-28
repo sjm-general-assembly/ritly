@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 # TODO check necessity for this gem. added to resolve accessible error
-gem 'protected_attributes'
+# This gem is not necessary when usign Rails 4, and using require / permit with params
+# gem 'protected_attributes'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
